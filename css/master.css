@@ -1,0 +1,452 @@
+body {
+    background-color: #222222;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Helvetica','Outfit';
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; */
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    z-index: 2;
+    margin: 0 10%;
+}
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    font-family:  "Montserrat";
+}
+#hamburger {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: transform 0.3s ease;
+}
+
+#hamburger.active {
+    transform: rotate(90deg); /* Rotate the hamburger icon when active */
+}
+
+
+.nav_content {
+    display: flex;
+    gap: 15px;
+}
+
+.nav_content a {
+   
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav_content a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f9f5f5fd;
+    border-bottom: 1px solid #4CAF50;
+    font-weight: 600;
+}
+
+
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3rem;
+}
+
+/* .profile {
+display: grid;
+align-items: center;
+grid-template-columns: 1fr 1fr;
+gap:1rem;
+padding:8rem;
+} */
+
+
+
+.introduction {
+/* text-align: left; */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+color: white;
+z-index: 2;
+
+}
+
+.introduction h2 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 33px;
+   
+}
+
+.introduction p {
+font-size: 30px;
+margin-bottom: 52px;
+
+}
+
+.contactBtn{
+    text-decoration: none;
+    background-color:#4CAF50;
+    color: white;
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+   
+}
+
+.contactBtn:hover{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    box-shadow: 0 0 10px green;
+}
+
+.role {
+font-size: 1.5em;
+
+color: #71ff61;
+display: inline-block;
+/* border-bottom: 2px solid #ff6f61; */
+margin-top: 1rem;
+
+}
+
+.topBlur {
+    width: 50vw;
+    height: 50vw;
+    top: -128px;
+    left: -10vw;
+    max-width: 350px;
+  
+}
+
+.bottomBlur {
+    width: 40vw;
+    height: 30vw;
+    top: 246px;
+    right: -5vw;
+    min-width: 200px;
+}
+.topBlur, .bottomBlur {
+    position: absolute;
+    border-radius: 764px;
+    /* background: rgba(25, 55, 109, 0.7); */
+    background: rgba(255, 255, 255, 0.364);
+    filter: blur(100px);
+
+}
+
+.profile_img {
+    /* width: 50%; */
+    /* max-width: 500px; */
+    /* border-radius: 50%; */
+    z-index: 1;
+    padding: 2rem;
+    animation: floating 3s ease-in-out infinite;
+    
+    }
+    .profile_img  img{
+        border-radius: 50%;
+        box-shadow: 0 4px 7px rgba(147, 147, 147, 0.25);
+        max-width: 400px;
+        max-height: 400px;
+        padding: 2rem;
+       
+    }
+
+
+/* .profile_img img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Green color */
+/* } */
+
+.separator {
+    margin: 0 auto;
+    width: 80%;
+    height: 3px;
+    background: #4CAF50;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+
+ .content {
+    margin: 2rem auto ;
+    text-align: center;
+    padding: 3rem;
+    max-width: 80%;
+    z-index: 1000000;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4CAF50;
+
+}
+.aboutSection{
+    border: 1px solid #4CAF50 ;
+    box-shadow:3px 7px 7px rgba(195, 195, 195, 0.25) ;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 90%;
+ 
+}
+
+/*  text-shadow: 0 0 5px #00faff, 0 0 10px #00faff, 0 0 15px #00faff, 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea; */
+
+
+.aboutDescription {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: slideIn 1.5s ease-in-out;
+text-align: center;
+  
+}
+
+
+
+#about .title ,#skill_box .title{
+    animation: fadeIn 1s ease-in-out;
+}
+
+.aboutSection:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Slide-in animation */
+
+
+/* General about section styling */
+.about-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333;
+    text-align: left;
+}
+.about-section .title{
+    text-align: center;
+}
+
+
+/* Flex container */
+.about-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Box styling */
+.about-box {
+    flex: 1;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+   
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(192, 191, 191, 0.15);
+    max-width: 48%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+.about-box::before {
+    content: '';
+    position: absolute;
+    top: -100%; /* Start the effect from above the box */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(1, 100, 90, 0.7), rgba(0, 150, 136, 0.5), rgba(208, 219, 218, 0.23));
+    transition: top 0.5s ease; /* Smooth transition downwards */
+    z-index: -1; /* Keep the effect behind the content */
+}
+
+
+.about-box:hover::before {
+    top: 0; /* Move the background down on hover */
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(129, 129, 129, 0.45);
+}
+.about-box:hover a{
+    color:rgb(2, 65, 2)
+}
+
+/* Title inside the box */
+.box-title {
+    font-size: 1.5rem;
+    color: rgb(204, 202, 202);
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Adding a decorative underline to box titles*/
+.box-title::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #2980b9;
+    display: block;
+    margin-top: 5px;
+} 
+.about-box strong{
+    color: rgb(180, 178, 178);
+}
+
+/* Text and link styling */
+.about-box p {
+    font-size: 1.2rem;
+   
+    color:rgb(228, 227, 227);
+    margin-bottom: 10px;
+    padding: .5rem;
+}
+
+
+.about-box a {
+    color: #00796b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.about-box a:hover {
+    text-decoration: underline;
+}
+
+/* Timeline Design */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 20px;
+    border-left: 3px solid #00796b;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 10px;
+}
+
+.timeline-year {
+    font-weight: bold;
+    background-color: #00796b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 1rem;
+    position: absolute;
+    left: -45px;
+    top: 0;
+}
+
+.timeline-item p{
+    position: relative;
+    color:rgb(228, 227, 227);;
+    top:40px
+}
+
+
+/* Animation for appearance */
+.about-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-box.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------- */
+/* Project Card Layout */
+
+
+
+
+
+
+/* .cube-container {
+    perspective: 1000px;
+} */
