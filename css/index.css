@@ -436,7 +436,7 @@ text-align: center;
 
 
   
-@media (max-width:789px) {
+@media screen and (max-width:789px) {
     #hamburger {
         display: block; /* Show hamburger button on small screens */
         z-index: 3;
@@ -485,7 +485,7 @@ text-align: center;
 
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .section {
         margin-top: 2rem;
         flex-direction: column-reverse;
@@ -525,7 +525,7 @@ text-align: center;
 
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .about-box {
         max-width: 100%;
         padding: 20px;

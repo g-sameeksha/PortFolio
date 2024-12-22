@@ -1,49 +1,48 @@
 #skill_box{
-    padding: 2rem; /* Padding around the section */
-    margin: 2rem auto; /* Centering the section */
-    max-width: 90%
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
 }
 
 .skills-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    justify-content: space-between; /* Space between the skill grid and the cube */
-    /* align-items: flex-start; Align items at the top */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     margin-top: 2rem;
-    max-width: 90%; /* Adjust the overall width */
+    max-width: 90%;
     z-index: 1;
 }
 
 .skill_box {
-    display: grid; /* Use grid for skills */
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
-    gap: 1rem; /* Space between individual skills */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
     padding: 1rem;
-    max-width: 60%; /* Allow space for the cube */
-    margin: 0; /* Remove extra vertical margins */
+    max-width: 60%;
+    margin: 0;
 }
 
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center-align text */
-    transition: transform 0.3s ease; /* Smooth transition for the transformation */
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .skill-image {
-    transition: transform 0.5s ease; /* Smooth transition for the transformation */
+    transition: transform 0.5s ease;
 }
 
 .skill:hover .skill-image img {
     animation: spin 1s forwards;
-    box-shadow: 0 0 20px rgb(3, 117, 69); /* Apply spin animation on hover */
+    box-shadow: 0 0 20px rgb(3, 117, 69);
 }
 
 .skill img {
-    width: 60px; /* Adjust size of the skill icon for smaller screens */
+    width: 60px;
     height: auto;
 }
 
@@ -59,25 +58,22 @@
 }
 
 .cube {
-
-    width: 250px; /* Adjust cube width */
-    height: 250px; /* Adjust cube height */
-    margin-left: 20px; /* Space between the grid and the cube */
-    position: relative; /* Ensure proper positioning */
-    transform-style: preserve-3d; /* Preserve 3D transformation */
-    transform: rotateX(0deg) rotateY(0deg); /* Initial rotation */
-    transition: transform 1s; /* Smooth transition for the rotation */
-    display: flex; /* Add flex to center its content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Cube face styles */
 .face {
     position: absolute;
-    width: 250px; /* Adjust face size */
-    height: 250px; /* Adjust face size */
-    /* box-shadow:3px 7px 7px rgba(195, 195, 195, 0.25) ; */
+    width: 250px;
+    height: 250px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -88,9 +84,9 @@
     border: 2px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-padding: 1rem;
-    border: 2px solid rgba(155, 178, 203, 0.5); /* Color and transparency of the border */
-    box-shadow: 0 0 10px rgba(219, 223, 218, 0.7), 0 0 20px rgba(153, 176, 200, 0.5); /* Glowing effect */
+    padding: 1rem;
+    border: 2px solid rgba(155, 178, 203, 0.5);
+    box-shadow: 0 0 10px rgba(219, 223, 218, 0.7), 0 0 20px rgba(153, 176, 200, 0.5);
 }
 
 .face h2 {
@@ -99,17 +95,16 @@ padding: 1rem;
     color: #a9dfaa;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
 }
 
 .face img {
-    width: 150px; /* Adjust image size */
-    height: 150px; /* Adjust image size */
+    width: 150px;
+    height: 150px;
     border-radius: 30%;
     margin-bottom: 10px;
 }
 
-/* Cube Face Positions */
 .front { transform: rotateY(0deg) translateZ(75px); }
 .back { transform: rotateY(180deg) translateZ(75px); }
 .right { transform: rotateY(90deg) translateZ(75px); }
@@ -117,9 +112,6 @@ padding: 1rem;
 .top { transform: rotateX(90deg) translateZ(75px); }
 .bottom { transform: rotateX(-90deg) translateZ(75px); }
 
-
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
      #skill_box{
         max-width: 100%;
@@ -135,81 +127,68 @@ padding: 1rem;
         padding: 1rem 0;
     }
     .cube {
-        width: 180px; /* Smaller cube */
-        height: 180px; /* Smaller cube */
+        width: 180px;
+        height: 180px;
         margin-top: 1rem;
         margin-bottom: 2rem;
-        
     }
 
     .face {
-        width: 180px; /* Smaller face size */
-        height: 180px; /* Smaller face size */
+        width: 180px;
+        height: 180px;
         padding: 1rem;
-        
     }
 
     .face h2 {
-        font-size: 1rem; /* Smaller font size */
+        font-size: 1rem;
     }
     .face img{
-        width: 100px; /* Adjust image size */
-        height: 100px; /* Adjust image size */
+        width: 100px;
+        height: 100px;
     }
-   
 
     .fab {
-        padding: 5px 8px; /* Smaller button padding */
-        font-size: 10px; /* Smaller button text */
+        padding: 5px 8px;
+        font-size: 10px;
     }
-   
-   
+
     .skill img {
-            width: 40px; /* Further reduce icon size */
+            width: 40px;
         }
     .skill .skill-title{
         font-size: 12px;
-
     }
-        
-    
-    
 }
 
-
-
-
 #projects {
-    padding: 2rem; /* Padding around the section */
-    margin: 2rem auto; /* Centering the section */
-    max-width: 90%; /* Maximum width */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
 }
 
 #projects .title {
-    text-align: center; /* Center the title */
-    font-size: 2rem; /* Title size */
-    margin-bottom: 1rem; /* Margin below the title */
-    color: #40a356; /* Title color */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #40a356;
 }
 
 .projects {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    justify-content: space-between; /* Space between project cards */    
-    gap: 1.5rem; /* Space between projects */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .project {
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px; /* Rounded corners */
-    /* padding: 1.5rem; 
-    padding-top: 0; */
-    text-align: center; /* Center text */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-    flex: 1 1 calc(30% - 1.5rem); /* Responsive columns */
-    min-width: 250px; /* Minimum width for responsiveness */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(30% - 1.5rem);
+    min-width: 250px;
 }
 
 .project .heading{
@@ -221,35 +200,37 @@ padding: 1rem;
     padding: 2px;
     margin-top: 0;
     text-align: center;
-
 }
+
 .project .desc{
     padding: 1.5rem;
     line-height: 1.5rem;
 }
+
 .project:hover {
     background: rgba(82, 81, 81, 0.1);
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.256); /* Deeper shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.256);
 }
+
 .project:hover .description{
     color: #999;  
 }
+
 .project:hover .heading{
  background-color: black;
 }
+
 .project img {
     max-width: 200px;
-     /* Responsive image */
-    max-height: auto; /* Maintain aspect ratio */
-    border-radius: 15px; /* Rounded corners for images */
-    margin-bottom: 0.5rem; /* Space below image */
-    
+    max-height: auto;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
 }
 
 .description {
-    color: #787777; /* Description text color */
-    margin-bottom: 1rem; /* Space below description */
+    color: #787777;
+    margin-bottom: 1rem;
 }
 
 .project a{
@@ -257,9 +238,8 @@ padding: 1rem;
   outline: none;
   padding: 5px;
   border-radius: 15px;
-
-color: black;
-font-weight: 600;
+  color: black;
+  font-weight: 600;
   background-color: #00ff59;
 }
 
@@ -287,20 +267,19 @@ font-weight: 600;
     }
 }
 
-
-
 #contact_box{
     display: flex;
     flex-direction: column;
     margin:1rem auto;
     padding: 1rem;
 }
+
 .contact_box{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* gap:3rem; */
 }
+
 .contact{
     text-align: center;
 }
@@ -310,34 +289,29 @@ font-weight: 600;
   outline: none;
   padding: 10px;
   border-radius: 15px;
-
-color: black;
-font-weight: 600;
+  color: black;
+  font-weight: 600;
   background-color: #00ff59;
- 
 }
 
 .contact-item:hover{
     box-shadow: 0 0 10px #00ff59;
     background-color: black;
     color: white;
-
 }
-
 
 @media screen and (max-width:768px) {
    .contact{
     flex-direction: column;
     font-size: 12px;
    }
-
 }
 
 footer{
     display: absolute;
     bottom: 0;
-text-align: center;
-background-color: black;
-height: 40px;
-padding:.5rem;
+    text-align: center;
+    background-color: black;
+    height: 40px;
+    padding:.5rem;
 }
