@@ -27,7 +27,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 40px;
     z-index: 2;
     margin: 0 10%;
 }
@@ -72,7 +72,6 @@ a{
     background: rgba(255, 255, 255, 0.1);
     color: #f9f5f5fd;
     border-bottom: 1px solid #4CAF50;
-    font-weight: 600;
 }
 
 
@@ -81,7 +80,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 7rem;
+    margin-top: 5rem;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
@@ -109,15 +108,15 @@ z-index: 2;
 }
 
 .introduction h2 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 700;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
    
 }
 
 .introduction p {
 font-size: 30px;
-margin-bottom: 52px;
+margin-bottom: 40px;
 
 }
 
@@ -144,9 +143,13 @@ font-size: 1.5em;
 
 color: #71ff61;
 display: inline-block;
-/* border-bottom: 2px solid #ff6f61; */
 margin-top: 1rem;
-
+white-space: nowrap;
+text-align: left;
+height: 2em; 
+line-height: 1.5em; /* Aligns the text vertically */
+overflow: hidden; 
+vertical-align: middle; 
 }
 
 .topBlur {
@@ -432,21 +435,163 @@ text-align: center;
 
 
 
+  
+@media (max-width:789px) {
+    #hamburger {
+        display: block; /* Show hamburger button on small screens */
+        z-index: 3;
+    }
+    #hamburger.active {
+    transform: rotate(45deg); /* Rotate the hamburger icon when active */
+    }
+
+  
+    .nav_content {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        /* background: rgba(0, 0, 0, 0.9); */
+        background: rgba(34, 34, 34, 0.95); /* Darker background */
+        width: 100%;
+        padding: 10px 0;
+        /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25); */
+        /* background: linear-gradient(0deg, rgba(25, 55, 109, 0.2) 0%, rgba(25, 55, 109, 1) 100%); */
+    }
+    
+
+    .nav_content.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .nav_content a {
+
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        font-size: 20px;
+        padding: px;
+
+    }
+
+    .nav_content a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #4CAF50;
+        transform: scale(1.05);
+    }
+}
 
 
 
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .section {
+        margin-top: 2rem;
+        flex-direction: column-reverse;
+    }
+    
+    .introduction h2 {
+        font-size: 1.5em;
+        margin-top: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .introduction p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    } 
+    
+    .introduction{
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile_img img {
+        width: 200px;
+        padding: .5rem;
+           
+    }
+    
+    .contactBtn{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 20px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+       
+    }
+    }
 
 
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-box {
+        max-width: 100%;
+        padding: 20px;
+        margin-top: 2rem;
+    }
+    .about-boxes{
+        flex-direction: column;
+    }
 
-/* --------------------------------------------------------- */
-/* Project Card Layout */
+    .about-section{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .about-box p,.timeline-item p{
+    padding: 0rem;
+
+    }
+
+}
 
 
 
+@media screen and (max-width:768px) {
+    .content{
+        max-width: 100%;
+        margin: 1rem auto ;
+        padding: 2rem;
+    }
+    .skill_box {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skill{
+        margin: 0.5rem;
+    }
+
+    .aboutSection{
+        padding: 10px;
+        max-width: 100%;
+    }
+}
 
 
+@media screen and (max-width:400px) {
+    .skill_box{
+        padding: 0;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-/* .cube-container {
-    perspective: 1000px;
-} */
+    #skill_box{
+        width: 100%;
+        margin: 0 auto ;
+        padding: 0rem;
+    }
+    .skill-title{
+        font-size: 16px;
+        font-weight: normal;
+        
+    }
+
+   .skill-image{
+    width: 70px;
+   }
+   .skill-image img{
+    width: 30px;
+    height: 30px;
+   }
+}

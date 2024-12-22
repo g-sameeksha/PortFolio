@@ -225,6 +225,7 @@ padding: 1rem;
 }
 .project .desc{
     padding: 1.5rem;
+    line-height: 1.5rem;
 }
 .project:hover {
     background: rgba(82, 81, 81, 0.1);
@@ -238,10 +239,12 @@ padding: 1rem;
  background-color: black;
 }
 .project img {
-    width: 200px; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 200px;
+     /* Responsive image */
+    max-height: auto; /* Maintain aspect ratio */
     border-radius: 15px; /* Rounded corners for images */
     margin-bottom: 0.5rem; /* Space below image */
+    
 }
 
 .description {
