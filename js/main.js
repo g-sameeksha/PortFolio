@@ -58,6 +58,7 @@ const skills = [
     { title: "HTML", imageSrc: "images/icons8-html-128.png" },
     { title: "CSS", imageSrc: "images/icons8-css-96.png" },
     { title: "JavaScript", imageSrc: "images/icons8-js-64.png" },
+    { title: "ReactJS", imageSrc: "images/react.png"},
     { title: "Flask", imageSrc: "images/icons8-flask-96.png" },
     { title: "Django", imageSrc: "images/django3.png" },
     { title: "Pandas", imageSrc: "images/icons8-pandas-96.png" },
